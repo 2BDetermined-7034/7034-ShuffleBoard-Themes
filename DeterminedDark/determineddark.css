@@ -11,7 +11,7 @@
   *                                                                             *
   ******************************************************************************/
  .root {
-     -fx-text-base-color: #fefefe;
+     -fx-text-base-color: #d2ad3a;
      /* Swatch Colors - Blue */
  
      -swatch-100: hsb(270, 80%, 98%);
@@ -24,12 +24,13 @@
      -swatch-gray: derive(-swatch-dark-gray, +10%);
      -swatch-light-gray: derive(-swatch-gray, +33%);
 
-
+     -swatch-dark-green: #043927;
+     -swatch-gold: #d2ad3a;
 
      
 
-     -fx-background: -swatch-gray;
-     -fx-color: -swatch-gray;
+     -fx-background: -swatch-dark-green;
+     -fx-color: -swatch-dark-green;
      -confirmation-color-confirmed: lime;
      -confirmation-color-error: red;
  }
