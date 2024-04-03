@@ -24,13 +24,19 @@
      -swatch-gray: derive(-swatch-dark-gray, +10%);
      -swatch-light-gray: derive(-swatch-gray, +33%);
 
-     -swatch-dark-green: #043927;
+     -swatch-green-background: #183e32;
+     -swatch-green-foreground: #143a2c;
      -swatch-gold: #d2ad3a;
+     -swatch-gold-transparent: #d2ac3a52;
+     -swatch-darker-green: #06170e;
+     -swatch-mint: #539881;
+     
+
 
      
 
-     -fx-background: -swatch-dark-green;
-     -fx-color: -swatch-dark-green;
+     -fx-background: -swatch-green-background;
+     -fx-color: -swatch-green-background;
      -confirmation-color-confirmed: lime;
      -confirmation-color-error: red;
  }
@@ -41,17 +47,17 @@
   *                                                                             *
   ******************************************************************************/
  .widget-pane {
-     -fx-grid-line-color: -swatch-dark-gray;
+     -fx-grid-line-color: -swatch-green-background; /* Color of grid Lines which widgets Occupy */
  }
  
  .grid-highlight {
-     -fx-border-color: #a7a7f7; /* Border of widgets when dragging them around */
-     -fx-background-color: #FFFFFF08; /* Background Color of widgets when dragging them around (Make Transparent) */
+     -fx-border-color: -swatch-gold; /* Border of widgets when dragging them around */
+     -fx-background-color: -swatch-gold-transparent; /* Background Color of widgets when dragging them around (Make Transparent) */
  }
  
  .grid-highlight:colliding {
-     -fx-border-color: -swatch-500; /* Color of widgets when dragging and overlapping with another widget */
-     -fx-background-color: #00000008; /* Background Color of widgets when dragging and overlapping with another widget */
+     -fx-border-color: -swatch-gold; /* Color of widgets when dragging and overlapping with another widget */
+     -fx-background-color: -swatch-gold-transparent; /* Background Color of widgets when dragging and overlapping with another widget */
  }
  
  /*******************************************************************************
@@ -60,8 +66,8 @@
   *                                                                             *
   ******************************************************************************/
  .grid-selection {
-     -fx-fill: #FFFFFF08;
-     -fx-stroke: #A7A7F7; /* Fill and Border of dragging to select */
+     -fx-fill: -swatch-gold-transparent;
+     -fx-stroke: -swatch-gold; /* Fill and Border of dragging to select */
      -fx-stroke-width: 0.25em;
  }
  
@@ -70,24 +76,24 @@
   * Menus                                                                       *
   *                                                                             *
   ******************************************************************************/
- .menu-bar {
-     -fx-background-color: -swatch-light-gray;
+ .menu-bar { /* Bar for Top Menus (Files, Recording, etc) */
+     -fx-background-color: -swatch-green-foreground;
  }
  
  .menu-item {
-     -fx-background-color: -swatch-gray;
+     -fx-background-color: -swatch-green-foreground;
  }
  
  .menu:hover, .menu:selected {
-     -fx-background-color: -swatch-200;
+     -fx-background-color: -swatch-mint;
  }
  
  .context-menu {
-     -fx-background-color: -swatch-gray;
+     -fx-background-color: -swatch-green-foreground;
  }
  
  .menu-item:hover, .menu-item:focused {
-     -fx-background-color: -swatch-200;
+     -fx-background-color: -swatch-mint;
  }
  
  /*******************************************************************************
@@ -97,12 +103,12 @@
   ******************************************************************************/
  .text-field, .text-area {
      -fx-text-fill: -fx-text-base-color;
-     -underline-color: -swatch-gray;
-     -fx-border-color: -swatch-light-gray;
+     -underline-color: -swatch-mint;
+     -fx-border-color: -swatch-mint;
  }
  
  .text-field:focused, .text-area:focused {
-     -fx-border-color: -swatch-200;
+     -fx-border-color: -swatch-gold;
  }
  
  /*******************************************************************************
@@ -151,11 +157,11 @@
   *                                                                             *
   ******************************************************************************/
  .tile .toggle-switch > .thumb-area {
-     -fx-background-color: -swatch-light-gray, -swatch-gray;
+     -fx-background-color: -swatch-green-background, -swatch-green-foreground;
  }
  
  .toggle-switch > .thumb-area {
-     -fx-background-color: derive(-swatch-light-gray, -25%), -swatch-dark-gray;
+     -fx-background-color: derive(-swatch-green-background, -25%), -swatch-green-foreground;
  }
  
  .toggle-switch > .thumb {
@@ -164,7 +170,7 @@
  
  .tile .toggle-switch:selected > .thumb-area,
  .toggle-switch:selected > .thumb-area {
-     -fx-background-color: -swatch-500;
+     -fx-background-color: -swatch-darker-green;
  }
  
  /*******************************************************************************
