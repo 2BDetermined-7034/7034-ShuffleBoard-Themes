@@ -117,13 +117,13 @@
   *                                                                             *
   ******************************************************************************/
  .toggle-button, .button {
-     -fx-background-color: rgb(64, 64, 64);
+     -fx-background-color: -swatch-gold;
      -fx-text-fill: white;
      -fx-effect: dropshadow(gaussian, rgba(0.0, 0.0, 0.0, 0.70), 6.0, 0.3, 0, 2);
  }
  
  .toggle-button:selected, .button:selected {
-     -fx-background-color: -swatch-500;
+     -fx-background-color: -swatch-darker-green;
      -fx-text-fill: white;
  }
  
@@ -132,22 +132,22 @@
  }
  
  .button:default {
-     -fx-background-color: -swatch-500;
+     -fx-background-color: -swatch-gold;
      -fx-text-fill: white;
  }
  
  .toggle-button:focused, .button:focused, .button:default:focused {
-     -fx-background-color: rgb(48, 48, 48);
+     -fx-background-color: -swatch-green-foreground;
      -fx-text-fill: white;
  }
  
  .toggle-button:focused:selected {
-     -fx-background-color: derive(-swatch-500, -12%);
+     -fx-background-color: derive(-swatch-green-foreground, -12%);
      -fx-text-fill: white;
  }
  
  .toggle-button:armed, .toggle-button:selected, .button:armed, .button:default:armed {
-     -fx-background-color: -swatch-500;
+     -fx-background-color: -swatch-green-foreground;
      -fx-text-fill: white;
  }
  
